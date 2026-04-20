@@ -1,4 +1,27 @@
-name: My first workflow
+# name: My first workflow
+
+# on: push
+
+# jobs:
+#   say-hello:
+#     runs-on: ubuntu-latest
+
+#     steps:
+#      - name: Print message
+#        run: echo "Hello!!"
+
+#   say-bye:
+#     runs-on: ubuntu-latest
+
+#     steps: 
+#      - name: Print message
+#        run: echo "Byee!!"
+
+
+
+
+
+name: My second workflow
 
 on: push
 
@@ -11,6 +34,7 @@ jobs:
        run: echo "Hello!!"
 
   say-bye:
+    needs: say-hello
     runs-on: ubuntu-latest
 
     steps: 
