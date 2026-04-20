@@ -21,22 +21,41 @@
 
 
 
-name: My second workflow
+# name: My second workflow
+
+# on: push
+
+# jobs:
+#   say-hello:
+#     runs-on: ubuntu-latest
+
+#     steps:
+#      - name: Print message
+#        run: echo "Hello!!"
+
+#   say-bye:
+#     needs: say-hello
+#     runs-on: ubuntu-latest
+
+#     steps: 
+#      - name: Print message
+#        run: echo "Byee!!"
+
+
+
+
+
+name: Clone repo workflow
 
 on: push
 
 jobs:
-  say-hello:
+  test:
     runs-on: ubuntu-latest
 
     steps:
      - name: Print message
-       run: echo "Hello!!"
+       uses: actions/checkout@v4
 
-  say-bye:
-    needs: say-hello
-    runs-on: ubuntu-latest
-
-    steps: 
-     - name: Print message
-       run: echo "Byee!!"
+     - name: list file
+       run: ls
