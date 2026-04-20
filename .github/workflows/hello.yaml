@@ -55,7 +55,7 @@ jobs:
 
     steps:
      - name: Print message
-       uses: actions/checkout@v4
+       uses: actions/checkout@v4  //clone a repo
 
      - name: list file
        run: ls
