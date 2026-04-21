@@ -69,7 +69,13 @@ jobs:
   deploy-app:
     needs: test
     runs-on: ubuntu-latest
-    
+
     steps:
-      - name: start server
-        run: node server.js 
+     - name: Checkout code //clone a repo
+       uses: actions/checkout@v4 
+
+     - name: install dependency
+       uses: npm i 
+
+     - name: start server
+       run: node server.js 
