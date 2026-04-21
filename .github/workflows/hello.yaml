@@ -54,8 +54,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    #  - name: Checkout code //clone a repo
-    #    uses: actions/checkout@v4 
+     - name: Checkout code //clone a repo
+       uses: actions/checkout@v4 
 
      - name: list file
        run: ls
+
+     - name: check version
+       run: node -v
