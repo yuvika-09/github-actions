@@ -57,9 +57,6 @@ jobs:
      - name: Checkout code //clone a repo
        uses: actions/checkout@v4 
 
-     - name: Setup Node.js
-       uses: actions/setup-node@v4
-
      - name: list file
        run: ls
 
@@ -76,9 +73,6 @@ jobs:
     steps:
      - name: Checkout code //clone a repo
        uses: actions/checkout@v4 
-
-     - name: Setup Node.js
-       uses: actions/setup-node@v4
 
      - name: install dependency
        run: npm i
