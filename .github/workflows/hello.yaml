@@ -62,3 +62,6 @@ jobs:
 
      - name: check version
        run: node -v
+
+     - name: starting test
+       run: npm run test
