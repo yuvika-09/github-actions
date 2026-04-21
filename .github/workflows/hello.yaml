@@ -65,3 +65,11 @@ jobs:
 
      - name: starting test
        run: npm run test
+
+  deploy-app:
+    needs: test
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: start server
+        run: node server.js 
