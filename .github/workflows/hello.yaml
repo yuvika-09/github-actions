@@ -81,7 +81,7 @@ jobs:
        uses: actions/setup-node@v4
 
      - name: install dependency
-       uses: npm install 
+       run: npm i
 
      - name: start server
        run: node server.js 
